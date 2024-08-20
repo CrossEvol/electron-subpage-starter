@@ -26,7 +26,26 @@
     "ecmaVersion": 11,
     "sourceType": "module"
   },
-  "plugins": ["react", "react-hooks", "@typescript-eslint", "tailwindcss"],
+  "plugins": [
+    "react",
+    "react-hooks",
+    "@typescript-eslint",
+    "tailwindcss"
+  ],
+  "ignorePatterns": [
+    "src/components/ui",
+    "node_modules/",
+    "dist/",
+    "dist-electron",
+    "build/",
+    "public/",
+    ".vscode",
+    "logs",
+    "playwright-report",
+    "release",
+    "packages",
+    "pages"
+  ],
   "rules": {
     "react-hooks/rules-of-hooks": "error",
     "react-hooks/exhaustive-deps": "warn",
@@ -34,6 +53,8 @@
     "react/react-in-jsx-scope": "off",
     "@typescript-eslint/explicit-module-boundary-types": "off",
     "@typescript-eslint/no-non-null-assertion": "off",
+    "@typescript-eslint/no-var-requires":"warn",
+    "@typescript-eslint/no-explicit-any": "warn",
     "tailwindcss/classnames-order": "warn",
     "tailwindcss/no-custom-classname": "warn",
     "tailwindcss/no-contradicting-classname": "error"

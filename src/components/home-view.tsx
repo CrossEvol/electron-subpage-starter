@@ -3,7 +3,7 @@ import { isDevelopment } from '@/constants'
 import React from 'react'
 
 export default function HomeView() {
-  const useDynamicImportElectronInEjs = async () => {
+  const handleDynamicImportElectronInEjs = async () => {
     if (!isDevelopment) {
       // Use electron APIs here
       const { ipcRenderer } = require('electron')
@@ -17,7 +17,7 @@ export default function HomeView() {
   }
 
   React.useEffect(() => {
-    useDynamicImportElectronInEjs()
+    handleDynamicImportElectronInEjs()
     return () => {}
   }, [])
 
